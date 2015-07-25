@@ -366,7 +366,7 @@ section.story-list .story-item.active {
 
 section.story-list .story-item .story-text {
     width: 100%;
-    margin: 0 2px;
+    margin: 5px;
 }
 
 section.story-list li:first-of-type .story-item .story-text {
@@ -376,9 +376,17 @@ section.story-list li:first-of-type .story-item .story-text {
     overflow: auto;
 }
 
+section.story-list .story-item .story-date {
+    display: none;
+}
+
 .tablet section.story-list .story-item .story-text {
     font-size: 1.5em;
     margin: 15px;
+}
+
+.tablet section.story-list .story-item .story-date {
+    display: block;
 }
 
 .tablet section.story-list li:first-of-type .story-item .story-text {
