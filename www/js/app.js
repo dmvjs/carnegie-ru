@@ -251,6 +251,32 @@ module.exports = {
     , missingImage: 'http://carnegieendowment.org/app-img-not-avail.png'
     , missingImageRef: void 0
     , menu: [{
+        title: 'Сегодня на Carnegie.ru'
+        , sub: 'Скачать'
+        , v: 'R'
+        , feeds: [{
+            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&lang=ru'
+            , name: 'Недавние публикации'
+            , filename: 'carnegieru-latest-ru.json'
+            , type: 'json'
+            , required: true
+        }, {
+         url: 'http://carnegieendowment.org/rss/feeds/mobile-carnegie-moscow-russian-top5.json.txt'
+         , name: 'Самое популярное)'
+         , filename: 'carnegieru-popular-ru.json'
+         , type: 'json'
+         }, {
+            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&channel=short&lang=ru'
+            , name: 'Статьи и интервью'
+            , filename: 'carnegieru-commentary-ru.json'
+            , type: 'json'
+        }, {
+            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&channel=long&lang=ru'
+            , name: 'Исследования'
+            , filename: 'carnegieru-research-ru.json'
+            , type: 'json'
+        }]
+    }, {
         title: 'Now from Carnegie.ru'
         , sub: 'Read Offline'
         , feeds: [{
@@ -273,31 +299,6 @@ module.exports = {
             url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&channel=long'
             , name: 'Research'
             , filename: 'carnegieru-research.json'
-            , type: 'json'
-        }]
-    }, {
-        title: 'Сегодня на Carnegie.ru'
-        , sub: 'Скачать'
-        , v: 'R'
-        , feeds: [{
-            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&lang=ru'
-            , name: 'Недавние публикации'
-            , filename: 'carnegieru-latest-ru.json'
-            , type: 'json'
-        }, {
-         url: 'http://carnegieendowment.org/rss/feeds/mobile-carnegie-moscow-russian-top5.json.txt'
-         , name: 'Самое популярное)'
-         , filename: 'carnegieru-popular-ru.json'
-         , type: 'json'
-         }, {
-            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&channel=short&lang=ru'
-            , name: 'Статьи и интервью'
-            , filename: 'carnegieru-commentary-ru.json'
-            , type: 'json'
-        }, {
-            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&channel=long&lang=ru'
-            , name: 'Исследования'
-            , filename: 'carnegieru-research-ru.json'
             , type: 'json'
         }]
     }, {
@@ -483,17 +484,17 @@ function friendlyDate (obj) {
     var arrow = $('<div/>', {
             addClass: 'select-arrow'
         }),
-        input = $('<select>', {
-        }).append(
+        input = $('<select>', {}
+        ).append(
             $('<option/>', {
-                val: 'English',
-                text: 'English',
+                val: 'Russian',
+                text: 'Pусский',
                 selected: true
             })
         ).append(
             $('<option/>', {
-                val: 'Russian',
-                text: 'Pусский'
+                val: 'English',
+                text: 'English'
             })
         )
             , checkrow = $('<div/>', {

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ceip.russia" android-versionCode="30705" ios-CFBundleVersion="5" version="3.0.7"
+<widget id="com.ceip.russia" android-versionCode="30706" ios-CFBundleVersion="6" version="3.0.7"
         xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Carnegie.ru</name>
     <description>

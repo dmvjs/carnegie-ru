@@ -17,17 +17,17 @@ function friendlyDate (obj) {
     var arrow = $('<div/>', {
             addClass: 'select-arrow'
         }),
-        input = $('<select>', {
-        }).append(
+        input = $('<select>', {}
+        ).append(
             $('<option/>', {
-                val: 'English',
-                text: 'English',
+                val: 'Russian',
+                text: 'Pусский',
                 selected: true
             })
         ).append(
             $('<option/>', {
-                val: 'Russian',
-                text: 'Pусский'
+                val: 'English',
+                text: 'English'
             })
         )
             , checkrow = $('<div/>', {
