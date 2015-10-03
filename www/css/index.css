@@ -102,6 +102,10 @@ header.stay {
     background-repeat: no-repeat;
 }
 
+.russia header.stay {
+    background-image: url('../img/header-main-russian.png');
+}
+
 .tablet header.stay {
     background-size: auto 66px;
 }
@@ -109,10 +113,15 @@ header.stay {
 header .story-list,
 header .menu {
     height: 44px;
-    background: url('../img/header-main-alt.png');
+    background-image: url('../img/header-main.png');
     background-color: #001c3d;
     background-size: auto 44px;
     background-repeat: no-repeat;
+}
+
+.russia header .story-list,
+.russia header .menu {
+    background-image: url('../img/header-main-russian.png');
 }
 
 .tablet header .story-list,
@@ -123,7 +132,7 @@ header .menu {
 
 header .story {
     height: 44px;
-    background: url('../img/header-story.png');
+    background-image: url('../img/header-story.png');
     background-size: auto 44px;
     background-repeat: no-repeat;
     background-color: #001c3d;
@@ -571,13 +580,17 @@ section.menu ul.menu-items li {
 }
 
 section.menu ul.menu-items li .hairline {
-    border-top: 1px solid #cce1fa;
+    border-top: 1px solid #ccc7c2;
     -webkit-transform: scaleY(0.5);
     transform: scaleY(0.5);
 }
 
 section.menu ul.menu-items li.active {
-    background-color: #ccc7c2;
+    background-color: #cce1fa;
+}
+
+section.menu ul.menu-items li.active .hairline {
+    border-top: 1px solid #cce1fa;
 }
 
 section.menu .menu-item.rtl {
@@ -1339,6 +1352,8 @@ footer.story-footer .spacer {
     url('../img/header-btn-story-back-active.png') no-repeat -9999px -9999px,
     url('../img/header-btn-story-menu-active.png') no-repeat -9999px -9999px,
     url('../img/header-story.png') no-repeat -9999px -9999px,
+    url('../img/header-main.png') no-repeat -9999px -9999px,
+    url('../img/header-main-russian.png') no-repeat -9999px -9999px,
     url('../img/checked.png') no-repeat -9999px -9999px,
     url('../img/unchecked.png') no-repeat -9999px -9999px,
     url('../img/header-offline.png') no-repeat -9999px -9999px;

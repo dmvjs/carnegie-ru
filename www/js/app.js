@@ -240,7 +240,7 @@ module.exports = {
 
 module.exports = {
     fs: void 0
-    , appName: 'Carnegie.ru'
+    , appName: 'Moscow'
     , track: true
     , trackId: 'UA-31877-32'
     , folder: 'com.ceip.carnegieru'
@@ -255,16 +255,16 @@ module.exports = {
         , sub: 'Скачать'
         , v: 'R'
         , feeds: [{
-            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&lang=ru'
+            url: 'http://carnegieendowment.org/rss/solr/?fa=AppGlobalJson&lang=ru'
             , name: 'Недавние публикации'
             , filename: 'carnegieru-latest-ru.json'
             , type: 'json'
             , required: true
         }, {
-         url: 'http://carnegieendowment.org/rss/feeds/mobile-carnegie-moscow-russian-top5.json.txt'
-         , name: 'Самое популярное)'
-         , filename: 'carnegieru-popular-ru.json'
-         , type: 'json'
+            url: 'http://carnegieendowment.org/rss/feeds/mobile-carnegie-moscow-russian-top5.json.txt'
+            , name: 'Самое популярное)'
+            , filename: 'carnegieru-popular-ru.json'
+            , type: 'json'
          }, {
             url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu&channel=short&lang=ru'
             , name: 'Статьи и интервью'
@@ -280,7 +280,7 @@ module.exports = {
         title: 'Now from Carnegie.ru'
         , sub: 'Read Offline'
         , feeds: [{
-            url: 'http://carnegieendowment.org/rss/solr/?fa=AppCarnegieRu'
+            url: 'http://carnegieendowment.org/rss/solr/?fa=AppGlobalJson&center=moscow'
             , name: 'Latest Analysis'
             , filename: 'carnegieru-latest.json'
             , type: 'json'
@@ -603,9 +603,11 @@ function friendlyDate (obj) {
         $('section.menu').find('.section-header').hide();
         $('section.menu').find('ul.menu-items').hide();
         if (showEnglish) {
+            $(document.body).removeClass('russia');
             $('section.menu').find('.section-header.en').show();
             $('section.menu').find('.section-header.en').next().show();
         } else {
+            $(document.body).addClass('russia');
             $('section.menu').find('.section-header.ru').show();
             $('section.menu').find('.section-header.ru').next().show();
         }

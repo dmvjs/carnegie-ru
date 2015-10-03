@@ -136,9 +136,11 @@ function friendlyDate (obj) {
         $('section.menu').find('.section-header').hide();
         $('section.menu').find('ul.menu-items').hide();
         if (showEnglish) {
+            $(document.body).removeClass('russia');
             $('section.menu').find('.section-header.en').show();
             $('section.menu').find('.section-header.en').next().show();
         } else {
+            $(document.body).addClass('russia');
             $('section.menu').find('.section-header.ru').show();
             $('section.menu').find('.section-header.ru').next().show();
         }
