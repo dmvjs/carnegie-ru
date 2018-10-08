@@ -13,7 +13,7 @@ module.exports = {
     , missingImage: 'http://carnegieendowment.org/app-img-not-avail.png'
     , missingImageRef: void 0
     , menu: [{
-        title: 'Сегодня на Carnegie.ru'
+        title: 'Сегодня на Москва'
         , sub: 'Скачать'
         , v: 'R'
         , feeds: [{
@@ -24,7 +24,7 @@ module.exports = {
             , required: true
         }, {
             url: 'http://carnegieendowment.org/rss/feeds/mobile-carnegie-moscow-russian-top5.json.txt'
-            , name: 'Самое популярное)'
+            , name: 'Самое популярное'
             , filename: 'carnegieru-popular-ru.json'
             , type: 'json'
          }, {
@@ -39,7 +39,7 @@ module.exports = {
             , type: 'json'
         }]
     }, {
-        title: 'Now from Carnegie.ru'
+        title: 'Now from Moscow'
         , sub: 'Read Offline'
         , feeds: [{
             url: 'http://carnegieendowment.org/rss/solr/?fa=AppGlobalJson&center=moscow'
